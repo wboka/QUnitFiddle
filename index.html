@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>qUnit Fiddle</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.17.1.css">
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+	
+	<div class="container-fluid">
+		<nav class="navbar navbar-qunit navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseThis">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">qUnit Fiddle</a>
+                </div>
+                <div class="collapse navbar-collapse" id="collapseThis">
+                    <ul class="nav navbar-nav">
+                        <li id="run"><a><span class="glyphicon glyphicon-play"></span> Run</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+	</div>
+	
+	<div class="container-fluid" id="mainContainer">
+		<div class="row">
+            <div class="col-md-6">
+                <label class="label label-info">Write Your Tests Here</label>
+                <br /><br />
+                <textarea id="tests" class="form-control"></textarea>            
+            </div>
+            <div class="col-md-6">
+                <label class="label label-info">Results</label>
+                <br /><br />
+                <div id="qunit"></div>
+                <div id="qunit-fixture"></div>
+            </div>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/qunit/qunit-1.17.1.js"></script>
+    <script type="text/javascript" src="https://togetherjs.com/togetherjs-min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    
+    <script id="testsScript"></script>
+</body>
+</html>
