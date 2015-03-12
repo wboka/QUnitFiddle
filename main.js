@@ -26,6 +26,7 @@ $(document).ready(function() {
 function runTests() {
 	$.ajax({
 		url: 'qUnitTests.html',
+		data: $("#tests").val(),
 		success: function(qUnitTests) {
 			$("#qUnitDiv").html(qUnitTests);
 		}
