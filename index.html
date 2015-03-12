@@ -9,7 +9,7 @@
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.17.1.css">
+        <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.17.1.css">
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
@@ -20,9 +20,7 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseThis">
                         <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">qUnit Fiddle</a>
                 </div>
@@ -39,22 +37,18 @@
 		<div class="row">
             <div class="col-md-6">
                 <label class="label label-info">Write Your Tests Here</label>
-                <br /><br />
                 <textarea id="tests" class="form-control"></textarea>            
             </div>
             <div class="col-md-6">
                 <label class="label label-info">Results</label>
-                <br /><br />
-                <div id="qunit"></div>
-                <div id="qunit-fixture"></div>
+                <div id="qUnitDiv"></div>
             </div>
 		</div>
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/qunit/qunit-1.17.1.js"></script>
-    <script type="text/javascript" src="https://togetherjs.com/togetherjs-min.js"></script>
+    <!--<script type="text/javascript" src="https://togetherjs.com/togetherjs-min.js"></script>-->
     <script type="text/javascript" src="main.js"></script>
     
     <script id="testsScript"></script>

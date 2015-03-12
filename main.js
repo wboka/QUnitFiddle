@@ -24,5 +24,7 @@ $(document).ready(function() {
 });
 
 function runTests() {
-    $("#testsScript").text($("#tests").val());   
+	$.ajax({
+		url: 'qUnitTests.html'
+	});
 }
