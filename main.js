@@ -25,6 +25,9 @@ $(document).ready(function() {
 
 function runTests() {
 	$.ajax({
-		url: 'qUnitTests.html'
+		url: 'qUnitTests.html',
+		success: function(qUnitTests) {
+			$("#qUnitDiv").html(qUnitTests);
+		}
 	});
 }
