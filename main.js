@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $("#run").on("click", runTests);
+
     $("textarea").keydown(function(e) {
         if(e.keyCode === 9) { // tab was pressed
             // get caret position/selection
@@ -20,15 +22,18 @@ $(document).ready(function() {
         }
     });
     
-    $("#run").on("click", runTests);
+    $(document).on("keydown", function(e) {
+        if ((e.keyCode == 10 || e.keyCode == 13) && e.ctrlKey) {
+            $("#run").click();    
+        }
+    });
+    
+    $("[title]").tooltip({
+        container: "body",
+        placement: "auto bottom"
+    });
 });
 
 function runTests() {
-	$.ajax({
-		url: 'qUnitTests.html',
-		data: $("#tests").val(),
-		success: function(qUnitTests) {
-			$("#qUnitDiv").html(qUnitTests);
-		}
-	});
+    $("#testsContainer").append("<script type='text/javascript'>" + $("#tests").val() + "</script>");
 }

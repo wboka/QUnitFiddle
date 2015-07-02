@@ -9,7 +9,7 @@
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.17.1.css">
+        <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.18.0.css">
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="collapseThis">
                     <ul class="nav navbar-nav">
-                        <li id="run"><a><span class="glyphicon glyphicon-play"></span> Run</a></li>
+                        <li id="run" title="Run your tests (CTRL + ENTER)"><a><span class="glyphicon glyphicon-play"></span> Run</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,20 +37,25 @@
 		<div class="row">
             <div class="col-md-6">
                 <label class="label label-info">Write Your Tests Here</label>
-                <textarea id="tests" class="form-control"></textarea>            
+                <textarea id="tests" class="form-control" rows="4"></textarea>
+                <label class="label label-info">Example:</label>
+<pre>QUnit.test( "hello test", function( assert ) {
+    assert.ok(true, "Passed!" );
+});</pre>
             </div>
             <div class="col-md-6">
                 <label class="label label-info">Results</label>
-                <div id="qUnitDiv"></div>
+                <div id="qunit"></div>
+                <div id="qunit-fixture"></div>
             </div>
 		</div>
+		<div id="testsContainer" class="hidden"></div>
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/qunit/qunit-1.18.0.js"></script>
     <!--<script type="text/javascript" src="https://togetherjs.com/togetherjs-min.js"></script>-->
     <script type="text/javascript" src="main.js"></script>
-    
-    <script id="testsScript"></script>
 </body>
 </html>

@@ -32,5 +32,6 @@ ul.nav li {
 }
 
 textarea {
+    font-family: monospace; 
     resize: vertical;    
 }
