@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <title>qUnit Fiddle</title>
-		
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Test your QUnit code online with QUnit Fiddle editor." />
+        <meta name="keywords" content="qunit, online qunit editor, testing qunit online, online ide, online code editor, qunit online editor" />
+
+        <title>QUnit Fiddle</title>
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.18.0.css">
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-	
-	<div class="container-fluid">
-		<nav class="navbar navbar-qunit navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseThis">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="glyphicon glyphicon-menu-hamburger"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">qUnit Fiddle</a>
+        <div class="container-fluid">
+            <nav class="navbar navbar-qunit navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseThis">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">QUnit Fiddle</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="collapseThis">
+                        <ul class="nav navbar-nav">
+                            <li id="run" title="Run your tests (CTRL + ENTER)"><a><span class="glyphicon glyphicon-play"></span> Run</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse" id="collapseThis">
-                    <ul class="nav navbar-nav">
-                        <li id="run" title="Run your tests (CTRL + ENTER)"><a><span class="glyphicon glyphicon-play"></span> Run</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-	</div>
-	
-	<div class="container-fluid" id="mainContainer">
-		<div class="row">
-            <div class="col-md-6">
-                <label class="label label-info">Write Your Tests Here</label>
-                <textarea id="tests" class="form-control" rows="4"></textarea>
-                <label class="label label-info">Example:</label>
+            </nav>
+        </div>
+
+        <div class="container-fluid" id="mainContainer">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="label label-info">Write Your Tests Here</label>
+                    <textarea id="tests" class="form-control" rows="4"></textarea>
+                    <label class="label label-info">Example:</label>
 <pre>QUnit.test( "hello test", function( assert ) {
     assert.ok(true, "Passed!" );
 });</pre>
+                </div>
+                <div class="col-md-6">
+                    <label class="label label-info">Results</label>
+                    <div id="qunit"></div>
+                    <div id="qunit-fixture"></div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label class="label label-info">Results</label>
-                <div id="qunit"></div>
-                <div id="qunit-fixture"></div>
-            </div>
-		</div>
-		<div id="testsContainer" class="hidden"></div>
-	</div>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="http://code.jquery.com/qunit/qunit-1.18.0.js"></script>
-    <!--<script type="text/javascript" src="https://togetherjs.com/togetherjs-min.js"></script>-->
-    <script type="text/javascript" src="main.js"></script>
-</body>
+            <div id="testsContainer" class="hidden"></div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+        <script type="text/javascript" src="https://togetherjs.com/togetherjs-min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
 </html>
