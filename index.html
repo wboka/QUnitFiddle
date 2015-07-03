@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Test your QUnit code online with QUnit Fiddle editor." />
-    <meta name="keywords" content="qunit, online qunit editor, testing qunit online, online ide, online code editor, qunit online editor" />
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Test your QUnit code online with QUnit Fiddle editor." />
+        <meta name="keywords" content="qunit, online qunit editor, testing qunit online, online ide, online code editor, qunit online editor" />
 
-    <title>QUnit Fiddle</title>
+        <title>QUnit Fiddle</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.18.0.css">
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-qunit navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">QUnit Fiddle</a>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.18.0.css">
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : '657731177690634',
+                    xfbml      : true,
+                    version    : 'v2.3'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div class="container-fluid">
+            <nav class="navbar navbar-qunit navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">QUnit Fiddle</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
+            </nav>
+        </div>
 
-    <div class="container-fluid" id="mainContainer">
-        <div class="row">
-            <div class="col-md-6">
-                <label class="label label-info">Write Your Tests Here</label>
-                <textarea id="tests" class="form-control" rows="4"></textarea>
-                <button type="button" class="btn btn-success btn-block" id="run" title="Run your tests (CTRL + ENTER)">
-                    <span class="glyphicon glyphicon-play"></span> Run
-                </button>
-                <label class="label label-info">Example:</label>
+        <div class="container-fluid" id="mainContainer">
+            <div
+                class="fb-like"
+                data-share="true"
+                data-width="450"
+                data-show-faces="true">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="label label-info">Write Your Tests Here</label>
+                    <textarea id="tests" class="form-control" rows="4"></textarea>
+                    <button type="button" class="btn btn-success btn-block" id="run" title="Run your tests (CTRL + ENTER)">
+                        <span class="glyphicon glyphicon-play"></span> Run
+                    </button>
+                    <label class="label label-info">Example:</label>
 <pre>QUnit.test( "hello test", function( assert ) {
     assert.ok(true, "Passed!" );
 });</pre>
+                </div>
+                <div class="col-md-6">
+                    <label class="label label-info">Results</label>
+                    <div id="qunit"></div>
+                    <div id="qunit-fixture"></div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label class="label label-info">Results</label>
-                <div id="qunit"></div>
-                <div id="qunit-fixture"></div>
-            </div>
+            <div id="testsContainer" class="hidden"></div>
         </div>
-        <div id="testsContainer" class="hidden"></div>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="http://code.jquery.com/qunit/qunit-1.18.0.js"></script>
-    <script type="text/javascript" src="https://togetherjs.com/togetherjs-min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+        <script type="text/javascript" src="https://togetherjs.com/togetherjs-min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
 </html>
