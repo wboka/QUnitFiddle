@@ -51,18 +51,22 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <label class="label label-info">Write Your Tests Here</label>
+                    <h2><label class="label label-info">Write Your Tests Here</label></h2>
                     <textarea id="tests" class="form-control" rows="4"></textarea>
-                    <button type="button" class="btn btn-success btn-block" id="run" title="Run your tests (CTRL + ENTER)">
-                        <span class="glyphicon glyphicon-play"></span> Run
-                    </button>
-                    <label class="label label-info">Example:</label>
-<pre>QUnit.test( "hello test", function( assert ) {
-    assert.ok(true, "Passed!" );
-});</pre>
+                    <div class="btn-group btn-group-justified" role="group">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-success" id="run" title="Run your tests (CTRL + ENTER)">
+                                <span class="glyphicon glyphicon-play"></span> Run
+                            </button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" id="example" title="Run example test (CTRL + SHIFT + ENTER)">
+                                <span class="glyphicon glyphicon-random"></span> Run Example
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <label class="label label-info">Results</label>
                     <div id="qunit"></div>
                     <div id="qunit-fixture"></div>
                 </div>

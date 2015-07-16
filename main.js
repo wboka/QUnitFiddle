@@ -1,5 +1,8 @@
+var exampleTest = 'QUnit.test( "hello test", function( assert ) {\n\tassert.ok(true, "Passed!" );\n});';
+
 $(document).ready(function() {
     $("#run").on("click", runTests);
+    $("#example").on("click", runExample);
 
     $("textarea").keydown(function(e) {
         if(e.keyCode === 9) { // tab was pressed
@@ -23,7 +26,9 @@ $(document).ready(function() {
     });
 
     $(document).on("keydown", function(e) {
-        if ((e.keyCode == 10 || e.keyCode == 13) && e.ctrlKey) {
+        if ((e.keyCode == 10 || e.keyCode == 13) && e.ctrlKey && e.shiftKey) {
+            $("#example").click();
+        } else if ((e.keyCode == 10 || e.keyCode == 13) && e.ctrlKey) {
             $("#run").click();
         }
     });
@@ -38,4 +43,10 @@ function runTests() {
     if ($("#tests").val().length > 0) {
         $("#testsContainer").append("<script type='text/javascript'>" + $("#tests").val() + "</script>");
     }
+}
+
+function runExample() {
+    $("#tests").val(exampleTest);
+
+    runTests();
 }
