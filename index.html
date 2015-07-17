@@ -35,20 +35,13 @@
         <div class="container-fluid">
             <nav class="navbar navbar-qunit navbar-fixed-top">
                 <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html">QUnit Fiddle</a>
-                    </div>
+                    <a class="navbar-brand" href="index.html">QUnit Fiddle</a>
+                    <div class="fb-like pull-right" data-colorscheme="dark" data-href="http://qunit.bokasolutions.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
                 </div>
             </nav>
         </div>
 
         <div class="container-fluid" id="mainContainer">
-            <div
-                class="fb-like"
-                data-share="true"
-                data-width="450"
-                data-show-faces="true">
-            </div>
             <div class="row">
                 <div class="col-md-6">
                     <h2><label class="label label-info">Write Your Tests Here</label></h2>
@@ -62,6 +55,11 @@
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default" id="example" title="Run example test (CTRL + SHIFT + ENTER)">
                                 <span class="glyphicon glyphicon-random"></span> Run Example
+                            </button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-danger" id="reset" title="Reset Tests (SHIFT + R)">
+                                <span class="glyphicon glyphicon-refresh"></span> Reset
                             </button>
                         </div>
                     </div>

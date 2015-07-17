@@ -39,3 +39,8 @@ textarea {
     font-family: monospace;
     resize: vertical;
 }
+
+/* Facebook */
+.fb-like {
+    padding: 15px;
+}

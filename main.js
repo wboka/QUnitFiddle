@@ -1,6 +1,7 @@
 var exampleTest = 'QUnit.test( "hello test", function( assert ) {\n\tassert.ok(true, "Passed!" );\n});';
 
 $(document).ready(function() {
+    $("#reset").on("click", resetTests);
     $("#run").on("click", runTests);
     $("#example").on("click", runExample);
 
@@ -27,9 +28,11 @@ $(document).ready(function() {
 
     $(document).on("keydown", function(e) {
         if ((e.keyCode == 10 || e.keyCode == 13) && e.ctrlKey && e.shiftKey) {
-            $("#example").click();
+            runExample();
         } else if ((e.keyCode == 10 || e.keyCode == 13) && e.ctrlKey) {
-            $("#run").click();
+            runTests();
+        } else if (e.keyCode == 82 && e.shiftKey) {
+            resetTests();
         }
     });
 
@@ -38,6 +41,11 @@ $(document).ready(function() {
         placement: "auto bottom"
     });
 });
+
+function resetTests() {
+    $("#tests").val("");
+    document.location.reload();
+}
 
 function runTests() {
     if ($("#tests").val().length > 0) {
