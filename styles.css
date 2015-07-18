@@ -25,6 +25,10 @@ ul.nav li {
     background: #9C3493;
 }
 
+.navbar-toggle {
+    padding: 5px 10px;
+}
+
 .page-header {
     padding: 0 0 9px 0;
     margin: 0 0 20px 0;

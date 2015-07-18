@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Test your QUnit code online with QUnit Fiddle editor." />
         <meta name="keywords" content="qunit, online qunit editor, testing qunit online, online ide, online code editor, qunit online editor" />
+        <meta name="google-site-verification" content="EKY-Xs9ZlYFZ72s8zzg7YJjhyR70i1g2yHdxwEEfFd0" />
 
         <title>QUnit Fiddle</title>
 
@@ -34,8 +35,33 @@
         <div class="container-fluid">
             <nav class="navbar navbar-qunit navbar-fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">QUnit Fiddle</a>
-                    <div class="fb-like pull-right" data-colorscheme="dark" data-href="http://qunit.bokasolutions.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle btn-info collapsed" data-toggle="collapse" data-target="#qunit-navbar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="glyphicon glyphicon-th"></span>
+                        </button>
+                        <a class="navbar-brand bg-primary" href="index.html">QUnit Fiddle</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="qunit-navbar">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#" id="run" title="Run your tests (CTRL + ENTER)">
+                                    <span class="glyphicon glyphicon-play"></span> Run
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="example" title="Run example test (CTRL + SHIFT + ENTER)">
+                                    <span class="glyphicon glyphicon-random"></span> Run Example
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="reset"  title="Reset Tests (SHIFT + R)">
+                                    <span class="glyphicon glyphicon-refresh"></span> Reset
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="fb-like pull-right" data-colorscheme="dark" data-href="http://qunit.bokasolutions.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -44,24 +70,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2><label class="label label-info">Write Your Tests Here</label></h2>
-                    <textarea id="tests" class="form-control" rows="4"></textarea>
-                    <div class="btn-group btn-group-justified" role="group">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-success" id="run" title="Run your tests (CTRL + ENTER)">
-                                <span class="glyphicon glyphicon-play"></span> Run
-                            </button>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default" id="example" title="Run example test (CTRL + SHIFT + ENTER)">
-                                <span class="glyphicon glyphicon-random"></span> Run Example
-                            </button>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-danger" id="reset" title="Reset Tests (SHIFT + R)">
-                                <span class="glyphicon glyphicon-refresh"></span> Reset
-                            </button>
-                        </div>
-                    </div>
+                    <textarea id="tests" class="form-control" rows="6"></textarea>
                 </div>
                 <div class="col-md-6">
                     <div id="qunit"></div>
@@ -71,6 +80,15 @@
             <div id="testsContainer" class="hidden"></div>
         </div>
 
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-60552521-1', 'auto');
+            ga('send', 'pageview');
+        </script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.18.0.js"></script>
