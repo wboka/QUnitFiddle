@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 function resetTests() {
     $("#tests").val("");
-    document.location.reload();
+    document.location.reload(true);
 }
 
 function runTests() {
